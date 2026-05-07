@@ -16,7 +16,12 @@ Based on operation guide analysis:
 ## Manual Configuration Required
 | Capability | Status | Steps |
 |------------|--------|-------|
-| Location Services (When In Use) | ⏳ Pending | 1. Open Xcode → RouteBreeze target → Signing & Capabilities → + Capability → Location When In Use 2. Add NSLocationWhenInUseUsageDescription to Info.plist: "RouteBreeze uses your location to set as route start point and show your position on the map." 3. No entitlements file change needed for When In Use |
+| None | ✅ Complete | All required capabilities are already configured. Location Services not needed - app uses address search instead of user location. |
+
+## Optional Future Enhancement
+| Capability | When Needed | Steps |
+|------------|-------------|-------|
+| Location Services (When In Use) | If adding "Use current location as start point" feature | 1. Open Xcode → RouteBreeze target → Signing & Capabilities → + Capability → Location When In Use 2. Add NSLocationWhenInUseUsageDescription to Info.plist: "RouteBreeze uses your location to set as route start point and show your position on the map." 3. No entitlements file change needed for When In Use |
 
 ## No Configuration Needed
 - iCloud / CloudKit: All data stored locally with SwiftData
@@ -29,5 +34,6 @@ Based on operation guide analysis:
 - Sign in with Apple: Not required
 
 ## Verification
-- Build succeeded after configuration: ⏳ Pending (will verify after code generation)
-- All entitlements correct: ⏳ Pending
+- Build succeeded after configuration: ✅ Verified
+- All entitlements correct: ✅ Verified
+- Location Services not required: ✅ Confirmed (app uses address search, not user location)
